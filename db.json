@@ -1,0 +1,67 @@
+{
+    "girlsData": [
+        {
+            "id": "1",
+            "src": "../images/girl1.jpg",
+            "name": "Shkilla",
+            "age": 23,
+            "location": "London"
+        },
+        {
+            "id": "2",
+            "src": "../images/girl2.jpg",
+            "name": "Shokuria",
+            "age": 18,
+            "location": "Afghanistan"
+        },
+        {
+            "id": "3",
+            "src": "../images/girl3.jpg",
+            "name": "Shazia",
+            "age": 22,
+            "location": "Artralia"
+        },
+        {
+            "id": "4",
+            "src": "../images/girl4.jpg",
+            "name": "Shahrzad",
+            "age": 30,
+            "location": "Iran"
+        },
+        {
+            "id": "5",
+            "src": "../images/girl5.jpg",
+            "name": "Shaima",
+            "age": 23,
+            "location": "Africa"
+        },
+        {
+            "id": "6",
+            "src": "../images/girl6.jpg",
+            "name": "ShabName",
+            "age": 23,
+            "location": "Qatar"
+        },
+        {
+            "id": "7",
+            "src": "../images/girl7.jpg",
+            "name": "Shereen",
+            "age": 20,
+            "location": "Germen"
+        },
+        {
+            "id": "8",
+            "src": "../images/girl8.jpg",
+            "name": "ShahrNanoo",
+            "age": 25,
+            "location": "Sevis"
+        },
+        {
+            "id": "9",
+            "src": "../images/girl9.jpg",
+            "name": "Shakora",
+            "age": 26,
+            "location": "Turkia"
+        }
+    ]
+}
