@@ -4,7 +4,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Container from "../container/Container";
-
+import { useShoppingContext } from "@/app/context/ShoppingContext";
 
 
 
@@ -19,6 +19,7 @@ const navLinks = [
 const NaveBar = () => {
 
     const pathName = usePathname();
+    const { cartTotalQty } = useShoppingContext()
 
     return (
 
@@ -32,6 +33,7 @@ const NaveBar = () => {
 
                     </div>
                     <div>
+                        <span className="bg-green-300 px-2 py-1 rounded-full ">{cartTotalQty}</span>
                         <Link className={` ${pathName === "/components/cart" ? "text-sky-400" : ""}`} href={'/components/cart'}>Shopping</Link>
                     </div>
                 </div>

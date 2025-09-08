@@ -1,6 +1,7 @@
 
 import Layout from "./components/NaveBar/layout";
 import NaveBar from "./components/NaveBar/page";
+import { ShoppingContextProvider } from "./context/ShoppingContext";
 import "./globals.css";
 
 export default function RootLayout({
@@ -11,7 +12,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body >
-        <Layout >{children}</Layout>
+        <ShoppingContextProvider>
+          <Layout >{children}</Layout>
+        </ShoppingContextProvider>
+
       </body>
     </html>
   );
