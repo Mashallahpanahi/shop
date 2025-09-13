@@ -22,10 +22,14 @@ async function OneGirl({ params }: oneGirlType) {
                     className="rounded-xl"
                 />
             </div>
-            <div className="col-span-6 text-center mt-14">
-                <h1 className="text-2xl font-bold">Name: {oneGirl.name}</h1>
-                <h3 className="text-lg">Age: {oneGirl.age}</h3>
-                <h3 className="text-lg">Location: {oneGirl.location}</h3>
+            <div className="col-span-6 text-center mt-14 flex flex-col items-center">
+                <div className="flex flex-col text-start">
+                    <h1 className="text-2xl font-bold">Name: {oneGirl.name}</h1>
+                    <h3 className="text-lg">Age: {oneGirl.age}</h3>
+                    <h3 className="text-lg">Location: {oneGirl.location}</h3>
+                    <h3>cost: {oneGirl.cost}</h3>
+
+                </div>
                 <p className="mt-4 text-gray-700">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 </p>

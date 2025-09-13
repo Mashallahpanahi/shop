@@ -1,17 +1,14 @@
 'use client'
-
-
+import { useShoppingContext } from "@/app/context/ShoppingContext";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Container from "../container/Container";
-import { useShoppingContext } from "@/app/context/ShoppingContext";
-
-
 
 
 const navLinks = [
     { href: "/", pathName: "Home" },
     { href: "/components/store", pathName: "Store" },
+    { href: "/dashboard", pathName: "Dashboard" },
 
 ]
 

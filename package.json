@@ -19,6 +19,7 @@
     "postgres": "^3.4.5",
     "react": "latest",
     "react-dom": "latest",
+    "react-paginate": "^8.3.0",
     "server-only": "^0.0.1",
     "tailwindcss": "3.4.17",
     "typescript": "5.7.3",

@@ -1,6 +1,6 @@
 
 "use client"
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 
 type ShoppingContextProviderProps = {
     children: React.ReactNode
@@ -79,6 +79,22 @@ export function ShoppingContextProvider({ children }: ShoppingContextProviderPro
             );
         });
     };
+
+
+
+    //the best location for saving data with by refreshing don't go is local storage
+
+    useEffect(() => {
+        const storedCartItems = localStorage.getItem("cartItems")
+        if (storedCartItems) {
+            setCartItems(JSON.parse(storedCartItems))
+        }
+    }, [])
+
+    useEffect(() => {
+        localStorage.setItem("cartItems", JSON.stringify(cartItems))
+    }, [cartItems])
+
 
 
 
