@@ -11,8 +11,8 @@ const Search = () => {
     const searchParams = useSearchParams()
 
     function handleClick() {
-        const currentSearchParams = new URLSearchParams(searchParams.toString())
-        currentSearchParams.set("name", search)
+        const currentSearchParams = new URLSearchParams(searchParams.toString())  //this take the old url and save
+        currentSearchParams.set("name", search)                                   //add to old url new value
         router.push(`/components/store?${currentSearchParams.toString()}`)
     }
     return (

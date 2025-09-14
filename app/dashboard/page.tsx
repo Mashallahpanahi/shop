@@ -58,7 +58,7 @@ const Dashboard = () => {
 
     return (
         <Container>
-            <div className="bg-orange-50">
+            <div className="bg-slate-100 ">
                 <div className="flex flex-col p-4 gap-4 mt-[100px] shadow-md rounded-md">
                     <h1 className="font-bold text-lg">Add item to shop</h1>
 
