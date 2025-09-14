@@ -43,6 +43,7 @@ import Link from "next/link";
 import Container from "../container/Container";
 import ProductItems from "../container/ProductItems";
 import Pagination from "../container/Pagination";
+import Search from "../container/Search";
 
 export interface girlsType {
     id: string,
@@ -65,21 +66,26 @@ export interface iProductList {
 
 export interface iStoreProps {
     params: Promise<{}>,
-    searchParams: Promise<{ page: string, per_page: string }>
+    searchParams: Promise<{ page: string, per_page: string, name: string }>
 }
 async function Store({ searchParams }: iStoreProps) {
     // fro pagination we use searchParams to coach the value and then use 
     const page = (await searchParams).page ?? "1";
     const per_page = (await searchParams).per_page ?? "3"
+    const name = (await searchParams).name ?? ""
 
 
-    const g = await axios.get<iProductList>(`http://localhost:5000/girlsData?_page=${page}&_per_page=${per_page}`);
+    const g = await axios.get<iProductList>(`http://localhost:5000/girlsData?_page=${page}&_per_page=${per_page}&name=${name}`);
     const girls = g.data;
     console.log(girls)
 
     return (
         <Container >
-            <div className="grid grid-cols-3 w-[90%] mx-auto mt-20 gap-4">
+            <div className=" mt-10 pl-8">
+                <Search />
+            </div>
+            <div className="grid grid-cols-3 w-[90%] mx-auto mt-10 gap-4">
+
                 {girls.data.map((girl) => (
                     <Link key={girl.id} href={`/components/store/${girl.id}`} >
                         <ProductItems {...girl} />
